@@ -6,7 +6,7 @@
         "emitDecoratorMetadata": true,
         "watch": true,
         "noEmitOnError": true,
-        "target": "ES6",
+        "target": "ES5",
         "noStrictGenericChecks": true,
 
 
