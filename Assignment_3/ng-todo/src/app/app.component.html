@@ -1,0 +1,13 @@
+<div class ="container" *ngFor="let todo of todoList">
+  <div class="row">
+    <div class="col-sm">
+      {{todo.title}}
+    </div>
+    <div class="col-sm">
+      <button (click)="onCompletedClick(todo)">Completed</button>
+    </div>
+  </div>
+</div>
+<p></p>
+
+<app-todo-form (newTodoAdd)="addNewTodo($event)"></app-todo-form>
