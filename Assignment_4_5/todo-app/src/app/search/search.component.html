@@ -1,0 +1,7 @@
+<p>search TODOs</p>
+
+<input type="text" (keyup)="getTodos($event)" #txtSearch/>
+
+<div class="container" *ngFor="let item of todos">
+    {{item.title}}
+</div>
