@@ -1,0 +1,23 @@
+<p>TODO List</p>
+<p></p>
+Sort Todo List:
+<input type="radio" name="sortGroup" value="asc" (change)="onSelectionChange($event)"><label for="asc">Asc</label>
+<input type="radio" name="sortGroup" value="desc" (change)="onSelectionChange($event)"><label for="desc">Desc</label>
+<p></p>
+<p></p>
+<div class="container">
+<table class="table table-bordered">
+    <tr>
+      <th>userId</th>
+      <th>Id</th>
+      <th>Title</th>
+      <th>Completed</th>
+    </tr>
+    <tr *ngFor="let todo of (todos|async)|sort : 'userId': isDesc">
+      <td>{{todo.userId}}</td>
+      <td>{{todo.id}}</td>
+      <td>{{todo.title}}</td>
+      <td>{{todo.completed}}</td>
+    </tr>
+  </table>
+</div>
