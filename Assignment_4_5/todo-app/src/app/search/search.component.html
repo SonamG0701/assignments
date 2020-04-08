@@ -2,6 +2,6 @@
 
 <input type="text" (keyup)="getTodos($event)" #txtSearch/>
 
-<div class="container" *ngFor="let item of todos">
+<div class="container" *ngFor="let item of todos | async">
     {{item.title}}
 </div>

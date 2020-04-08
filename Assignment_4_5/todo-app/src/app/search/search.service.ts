@@ -24,7 +24,7 @@ export class SearchService {
         this.handleError = httpErrorHandler.createHandleError('SearchService');
       }
 
-      getTodos (searchText:string): Observable<TODO[]> {
+      getTodos (searchText:any): Observable<TODO[]> {
         return this.http.get<TODO[]>(this.todoUrl + searchText)
           .pipe(
             catchError(this.handleError('getTodos', []))
