@@ -13,7 +13,7 @@ Sort Todo List:
       <th>Title</th>
       <th>Completed</th>
     </tr>
-    <tr *ngFor="let todo of (todos|async)|sort : 'userId': isDesc">
+    <tr *ngFor="let todo of (todos|async)|sort : 'userId': isAsc">
       <td>{{todo.userId}}</td>
       <td>{{todo.id}}</td>
       <td>{{todo.title}}</td>

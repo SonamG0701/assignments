@@ -10,7 +10,7 @@ import {SortPipe} from '../pipes/sort.pipe'
 })
 export class TodoComponent implements OnInit {
   todos:any;
-  isDesc:boolean = true;
+  isAsc:boolean = true;
 
   constructor(private todoService: ToDoService) { }
 
@@ -20,10 +20,10 @@ export class TodoComponent implements OnInit {
 
   onSelectionChange(event) {
     console.log('onSelectionChange'+ event.target.value)
-    if(event.target.value="asc")
-      this.isDesc = false;
+    if(event.target.value=="desc")
+      this.isAsc = false;
     else 
-      this.isDesc = true;
+      this.isAsc = true;
 
   }
 
